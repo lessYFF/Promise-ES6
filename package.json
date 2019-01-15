@@ -6,8 +6,8 @@
     "description": "achieve promise using es6",
     "main": "index.js",
     "scripts": {
-        "format": "prettier --write src/**/*.js test/**/*.js",
-        "test": "node test"
+        "test": "mocha test/index",
+        "format": "prettier --write ./**/*.js"
     },
     "repository": {
         "type": "git",
@@ -28,6 +28,7 @@
     },
     "husky": {
         "hooks": {
+            "pre-commit": "lint-staged",
             "commit-msg": "commitlint -e $GIT_PARAMS"
         }
     },
@@ -38,6 +39,7 @@
     },
     "devDependencies": {
         "@babel/core": "^7.2.2",
+        "@babel/plugin-proposal-class-properties": "^7.2.3",
         "@babel/preset-env": "^7.2.3",
         "@babel/register": "^7.0.0",
         "@commitlint/cli": "^7.3.1",
