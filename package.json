@@ -1,0 +1,55 @@
+{
+    "name": "Promise-Es6",
+    "version": "1.0.0",
+    "author": "Bruce yff",
+    "license": "MIT",
+    "description": "achieve promise using es6",
+    "main": "index.js",
+    "scripts": {
+        "format": "prettier --write src/**/*.js test/**/*.js",
+        "test": "node test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/lessYFF/Promise-ES6.git"
+    },
+    "keywords": [
+        "promise"
+    ],
+    "bugs": {
+        "url": "https://github.com/lessYFF/Promise-ES6/issues"
+    },
+    "homepage": "https://github.com/lessYFF/Promise-ES6#readme",
+    "lint-staged": {
+        "*.{js,json,ts,css,md}": [
+            "prettier --write",
+            "git add"
+        ]
+    },
+    "husky": {
+        "hooks": {
+            "commit-msg": "commitlint -e $GIT_PARAMS"
+        }
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "devDependencies": {
+        "@babel/core": "^7.2.2",
+        "@babel/preset-env": "^7.2.3",
+        "@babel/register": "^7.0.0",
+        "@commitlint/cli": "^7.3.1",
+        "@commitlint/config-conventional": "^7.3.1",
+        "chai": "^4.2.0",
+        "cz-conventional-changelog": "^2.1.0",
+        "eslint": "^5.12.0",
+        "eslint-config-prettier": "^3.4.0",
+        "eslint-plugin-prettier": "^3.0.1",
+        "husky": "^1.3.1",
+        "lint-staged": "^8.1.0",
+        "mocha": "^5.2.0",
+        "prettier": "^1.15.3"
+    }
+}
